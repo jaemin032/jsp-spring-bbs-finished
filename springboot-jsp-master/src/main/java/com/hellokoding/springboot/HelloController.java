@@ -3,6 +3,7 @@ package com.hellokoding.springboot;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.bind.annotation.RequestParam;
 
 @Controller
@@ -37,4 +38,10 @@ public class HelloController {
     public String bbs() {
         return "bbs";
     }
+
+    @RequestMapping("/view")
+    public String view() {
+        return "view";
+    }
+
 }
