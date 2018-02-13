@@ -15,6 +15,8 @@
 
 </head>
 <body>
+
+
     <%
     String userID = null;
     if(session.getAttribute("userID") != null) {
@@ -41,7 +43,7 @@
         </ul>
             <%
             if(userID == null) {
-        %>
+            %>
         <ul class="nav navbar-nav navbar-right">
             <li class="dropdown">
                 <a href="#" class="dropdown-toggle"
@@ -66,7 +68,7 @@
                 </ul>
             </li>
         </ul>
-            <%
+        <%
             }
         %>
     </div>

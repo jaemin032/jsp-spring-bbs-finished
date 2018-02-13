@@ -17,11 +17,15 @@
     <title>JSP Bulletin Board</title>
 </head>
 <body>
+
+
+
 <%
     String userID = null;
-    if(session.getAttribute(userID) != null) {
+    if(session.getAttribute("userID") != null) {
         userID = (String) session.getAttribute("userID");
     }
+
     if(userID == null) {
         PrintWriter script = response.getWriter();
         script.println("<script>");
@@ -47,16 +51,13 @@
                 script.println("history.back()");
                 script.println("</script>");
             } else {
-                session.setAttribute("userID", response.getWriter());
                 PrintWriter script = response.getWriter();
                 script.println("<script>");
-                script.println(" location.href = 'bbs.jsp' ");
+                script.println("location.href='bbs.jsp'");
                 script.println("</script>");
             }
         }
     }
-
-%>
 %>
 </body>
 </html>
